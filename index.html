@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flashcard Generator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study with Dory</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Flashcard Generator</h1>
-  <form id="generate-form">
-    <input type="text" id="topic" placeholder="Enter a topic" required />
-    <button type="submit">Generate Flashcards</button>
-  </form>
-  <div id="flashcards"></div>
-  <script src="script.js"></script>
+        <div class="container">
+            <h1 class="title">StudyWithDory</h1>
+            <hr>
+            <h2 class="label">Pick a topic to dive into...</h2>
+            
+            <!-- Text box for entering the topic -->
+            <input type="text" class="topic" placeholder="Enter topic here...">
+            <h2 class="labe">Choose how many pearls (flashcards) to collect...</h2>
+            <input type="number" class="topi" placeholder="Enter topic here...">
+            <h2 class="lab">Would you prefer studying with a timer?</h2>
+        </div>
+        <div class="button-container">
+            <button class="yes-button">Yes</button>
+            <button class="no-button">No</button>
+        </div>
+        <script src="script.js"></script>
+    
 </body>
 </html>
