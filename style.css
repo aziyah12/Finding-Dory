@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #flashcards {
+    margin-top: 20px;
+  }
+  
+  .flashcard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flashcard .question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .flashcard .answer {
+    color: #555;
+    display: none;
+  }
+  
+  .flashcard .answer:not(.hidden) {
+    display: block;
+  }
+  
+  .flashcard button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .flashcard button:hover {
+    background-color: #218838;
+  }
