@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Set the background */
@@ -10,136 +11,153 @@ body {
   font-family: 'Arial', sans-serif;
   height: 100vh;
   /* Background image URL (can be replaced with any image URL you prefer) */
-  background: url('back2.jpg') no-repeat center center/cover;
+  background: url('back.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f0f0f0; /* fallback background color */
 }
 
+/* Right-side image container */
+.right-image {
+  position: absolute;
+  right: 8%;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure the image stays in the background */
+}
 
+/* Right-side image styling */
+.right-image img {
+  max-width: 370px; /* Adjust size as needed */
+  border-radius: 50%;
+  height: auto;
+  animation: scaleAnimation 5s ease-in-out infinite; /* Apply animation */
+}
+
+/* Animation keyframes to scale the image */
+@keyframes scaleAnimation {
+  0% {
+      transform: scale(1); /* Start at normal size */
+  }
+  50% {
+      transform: scale(1.1); /* Increase size a little */
+  }
+  100% {
+      transform: scale(1); /* Return to normal size */
+  }
+}
 
 /* Center content */
 .container {
-  text-align: "left";
+  text-align: center;
   color: #fff;
+  background-size: cover;
+  position: relative;
+  top:-5%;
+  right: 6%;
 }
 
 /* Title style */
 .title {
-  position: absolute;
-  right: 87%;
-  top: 5%;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Label styling for all labels (topics and input field labels) */
+.label {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-.label
-{
-  position: absolute;
-  right: 67%;
-  top: 25%;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-.labe
-{
-  position: absolute;
-  right: 5%;
-  top: 25%;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-.lab
-{
-  position: absolute;
-  right: 35%;
-  top: 55%;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 10px 0;
 }
 
-.topic 
-{
-  position: absolute;
-  right: 66%;
-  top: 35%;
-  font-size: 18px;
-  border: 3px solid #0077B6; 
+/* Dropdown styling */
+.topic-dropdown {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #FF8C00;
   border-radius: 8px;
-  outline: none;
-  width: 90%; 
-  max-width: 400px; 
-  background-color: rgba(0, 0, 0, 0.3); 
-  color: #fff;
-  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
 }
-.topi 
-{
-  position: absolute;
-  right: 27%;
-  top: 35%;
-  font-size: 18px;
-  border: 3px solid #0077B6; 
+
+/* Flashcard count input styling */
+.flashcard-count {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #FF8C00;
   border-radius: 8px;
-  outline: none;
-  width: 90%; 
-  max-width: 400px; 
-  background-color: rgba(0, 0, 0, 0.3); 
-  color: #fff;
-  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
-
-.topic:focus {
-  border-color: #00B4D8; 
-}
-
+/* Button container styling */
 .button-container {
-  position: absolute;
-  right: 50%;
-  top: 65%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  position:absolute;
+  top:70%;
+  right:50%;
 }
 
-
-.yes-button, .no-button {
+/* Start button style */
+.start-button {
   padding: 15px 30px;
   font-size: 18px;
+  background-color: #FF8C00;
+  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
+/* Hover effect for start button */
+.start-button:hover {
+  background-color: #FF7F00;
+  animation: shake 0.5s ease-in-out; /* Apply shake animation */
+}
 
-.yes-button {
-  background-color: #00B4D8;
+/* Shake keyframes for start button */
+@keyframes shake {
+  0% {
+      transform: translateX(0); /* No shift */
+  }
+  25% {
+      transform: translateX(-5px); /* Move left */
+  }
+  50% {
+      transform: translateX(5px); /* Move right */
+  }
+  75% {
+      transform: translateX(-5px); /* Move left */
+  }
+  100% {
+      transform: translateX(0); /* Return to original position */
+  }
+}
+
+/* Back button styling */
+.back-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #FF6347; /* Tomato color for contrast */
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
 }
 
-.yes-button:hover {
-  background-color: #0077B6;
-}
-
-
-.no-button {
-  background-color: #FF6347;
-  color: white;
-}
-
-.no-button:hover {
+/* Hover effect for back button */
+.back-button:hover {
   background-color: #FF4500;
 }
-

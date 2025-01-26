@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="container">
-            <h1 class="title">StudyWithDory</h1>
-            <hr>
-            <h2 class="label">Pick a topic to dive into...</h2>
-            
-            <!-- Text box for entering the topic -->
-            <input type="text" class="topic" placeholder="Enter topic here...">
-            <h2 class="labe">Choose how many pearls (flashcards) to collect...</h2>
-            <input type="number" class="topi" placeholder="Enter topic here...">
-            <h2 class="lab">Would you prefer studying with a timer?</h2>
-        </div>
-        <div class="button-container">
-            <button class="yes-button">Yes</button>
-            <button class="no-button">No</button>
-        </div>
-        <script src="script.js"></script>
-    
+    <div class="container">
+        <h1 class="title">StudyWithDory</h1>
+        <hr>..
+        
+        <h2 class="label">Pick a topic to dive into...</h2>
+        
+        <!-- Dropdown for selecting the topic -->
+        <select class="topic-dropdown">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="history">History</option>
+            <option value="geography">Geography</option>
+            <option value="freedom-fight">Freedom Fight</option>
+            <option value="constitution">Constitution</option>
+            <option value="politics">Politics</option>
+        </select>
+
+        <h2 class="label">Choose how many pearls (flashcards) to collect...</h2>
+        <!-- Input for selecting the number of flashcards -->
+        <input type="number" class="flashcard-count" min="3" max="12" placeholder="Enter a number between 3 and 12">
+    </div>
+
+    <!-- Button container for user actions -->
+    <div class="button-container">
+        <button class="start-button">Start Studying</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

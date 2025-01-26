@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study with Dory</title>
+    <title>Flashcards</title>
     <link rel="stylesheet" href="third.css">
 </head>
 <body>
-    <h1>READY GET SET GO!!!</h1>
-    <h1 id="countdownDisplay">00:00</h1>
-    <button id="openModalButton">Set Timer</button>
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <label for="timeInput">Set Time (minutes):</label>
-            <input type="number" id="timeInput" min="1" placeholder="Enter minutes">
-            <button id="startButton">Start Countdown</button>
+    <div class="container">
+        <h1 class="title">Flashcards for <span id="topic-name"></span></h1>
+        
+        <div class="timer-container">
+            <label for="timer-input">Set Timer (in seconds):</label>
+            <input type="number" id="timer-input" min="1" placeholder="Enter time">
+            <button id="start-timer-btn">Start Timer</button>
+            <p id="timer-display">Time Left: <span id="timer">--</span></p>
         </div>
-    </div>
 
-    <!-- Flashcards Section -->
-    <section id="flashcards-section">
-        <h2>FLASH into Your MEMORY</h2>
-        <div id="flashcards-container">
-            <!-- Flashcards will be dynamically generated here -->
+        <div class="flashcards-container" id="flashcards-container">
+            <!-- Flashcards will be generated here -->
         </div>
-    </section>
+
+         <!-- QUIZ Button -->
+         <div class="quiz-section">
+            <button id="quiz-button">QUIZ</button>
+        </div>
+
+    </div>
 
     <script src="third.js"></script>
 </body>
+
+
 </html>
